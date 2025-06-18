@@ -1,1 +1,158 @@
 /*  your css code here. If applicable */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #f9fafb;
+    color: #212529;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    color: #0d084d; /* Dark Indigo */
+  }
+
+  
+  .form-group {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 24px 32px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+  }
+  .form-group label {
+    flex-basis: 100%;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4b4f6a;
+  }
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #ced4da;
+    flex-grow: 1;
+    flex-basis: calc(33% - 10.66px);
+    min-width: 140px;
+    transition: border-color 0.2s ease-in-out;
+  }
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7c3aed; /* Purple accent */
+    box-shadow: 0 0 6px rgba(124, 58, 237, 0.3);
+  }
+  button#submit {
+    cursor: pointer;
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    border: none;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+    flex-basis: 100%;
+    max-width: 160px;
+    align-self: flex-start;
+  }
+  button#submit:hover,
+  button#submit:focus {
+    background: linear-gradient(135deg, #9333ea, #7c3aed);
+    outline: none;
+    transform: translateY(-2px);
+  }
+  button#submit:active {
+    transform: translateY(0);
+  }
+
+  }
+  button#submit:active {
+    transform: translateY(0);
+  }
+  table.table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  table.table thead {
+    background: linear-gradient(90deg, #7c3aed, #9333ea);
+    color: #fff;
+  }
+  table.table thead th {
+    text-align: left;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  table.table tbody tr:nth-child(even) {
+    background: #f7f5ff;
+  }
+  table.table tbody tr:hover {
+    background: #ede9ff;
+  }
+  table.table tbody td {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    vertical-align: middle;
+    color: #333;
+  }
+button.delete {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #e11d48; /* Rose 600 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  button.delete:hover,
+  button.delete:focus {
+    background-color: rgba(225, 29, 72, 0.12);
+    outline: none;
+  }
+  button.delete .material-icons {
+    font-size: 20px;
+    line-height: 1;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .form-group {
+      flex-direction: column;
+      padding: 16px 24px;
+    }
+    input[type="text"] {
+      flex-basis: 100% !important;
+    }
+	  button#submit {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    table.table thead {
+      font-size: 0.9rem;
+    }
+    table.table tbody td {
+      font-size: 0.85rem;
+      padding: 12px 10px;
+    }
+  }

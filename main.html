@@ -7,6 +7,27 @@
 </head>
 
 <body>
+	<h1>MyBookList</h1>
+  <div class="form-group" role="form" aria-label="Add new book">
+    <label for="title" class="visually-hidden">Title</label>
+    <input type="text" id="title" name="title" placeholder="Book Title" aria-required="true" autocomplete="off" />
+    <label for="author" class="visually-hidden">Author</label>
+    <input type="text" id="author" name="author" placeholder="Author" aria-required="true" autocomplete="off" />
+    <label for="isbn" class="visually-hidden">ISBN Number</label>
+    <input type="text" id="isbn" name="isbn" placeholder="ISBN Number" aria-required="true" autocomplete="off" />
+    <button id="submit" type="button" aria-label="Add book">Add Book</button>
+  </div>
+  <table class="table table-striped" aria-label="Added books">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">ISBN#</th>
+        <th scope="col">Clear</th>
+      </tr>
+    </thead>
+    <tbody id="book-list"></tbody>
+  </table>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
